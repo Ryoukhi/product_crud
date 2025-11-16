@@ -1,4 +1,18 @@
 ````markdown
+<p align="center">
+  <img src="https://raw.githubusercontent.com/edent/SuperTinyIcons/master/images/svg/java.svg" width="90" alt="Java Logo">
+</p>
+
+<h1 align="center">🛍️ Product Management API</h1>
+
+<p align="center">
+  API RESTful développée avec Spring Boot, documentée avec Swagger/OpenAPI.
+</p>
+
+<p align="center">
+  <b>Gestion de produits • CRUD complet • Documentation interactive</b>
+</p>
+
 # API de Gestion de Produits - Spring Boot
 
 Une API REST complète pour gérer un catalogue de produits avec documentation Swagger intégrée.
