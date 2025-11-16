@@ -1,4 +1,5 @@
 ````markdown
+[![Documentation Status](https://readthedocs.org/projects/ton-projet/badge/?version=latest)](https://ton-projet.readthedocs.io/fr/latest/)
 
 # API de Gestion de Produits - Spring Boot
 
