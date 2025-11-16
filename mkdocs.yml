@@ -6,3 +6,4 @@ nav:
   - Architecture: docs/architecture.md
   - API: docs/api.md
   - Configuration: docs/configuration.md
+  - Historique des commits: docs/commits.md
