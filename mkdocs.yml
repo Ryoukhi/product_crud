@@ -1,0 +1,8 @@
+site_name: Documentation Spring Boot
+theme:
+  name: material
+nav:
+  - Accueil: docs/index.md
+  - Architecture: docs/architecture.md
+  - API: docs/api.md
+  - Configuration: docs/configuration.md

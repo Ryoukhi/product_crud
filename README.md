@@ -138,7 +138,7 @@ src/main/resources/
 
 ## Technologies utilisées
 
-* Spring Boot 3.5.1
+* Spring Boot 3.5.7
 * Spring Data JPA
 * MySql Database
 * SpringDoc OpenAPI
