@@ -24,7 +24,7 @@ public class ProductController {
     private ProductService productService;
     
     @GetMapping
-    @Operation(summary = "Obtenir tous les produits", description = "Récupère la liste complète des produits", tags = {"IMPORTANT", "PRODUCTS"})
+    @Operation(summary = "Obtenir tous les produits", description = "Récupère la liste complète des produits", tags = {"IMPORTANT"})
     @ApiResponse(responseCode = "200", description = "Liste des produits récupérée avec succès")
     public ResponseEntity<List<Product>> getAllProducts() {
         List<Product> products = productService.getAllProducts();
@@ -32,7 +32,7 @@ public class ProductController {
     }
     
     @GetMapping("/{id}")
-    @Operation(summary = "Obtenir un produit par ID", description = "Récupère un produit spécifique par son identifiant", tags = {"CRITIQUE", "AUTH"})
+    @Operation(summary = "Obtenir un produit par ID", description = "Récupère un produit spécifique par son identifiant", tags = {"CRITIQUE"})
     @ApiResponses(value = {
         @ApiResponse(responseCode = "200", description = "Produit trouvé"),
         @ApiResponse(responseCode = "404", description = "Produit non trouvé")
@@ -45,7 +45,7 @@ public class ProductController {
     }
     
     @PostMapping
-    @Operation(summary = "Créer un nouveau produit", description = "Ajoute un nouveau produit à la base de données", tags = {"CRITIQUE", "AUTH"})
+    @Operation(summary = "Créer un nouveau produit", description = "Ajoute un nouveau produit à la base de données", tags = {"CRITIQUE"})
     @ApiResponses(value = {
         @ApiResponse(responseCode = "201", description = "Produit créé avec succès"),
         @ApiResponse(responseCode = "400", description = "Données invalides")
@@ -57,7 +57,7 @@ public class ProductController {
     }
     
     @PutMapping("/{id}")
-    @Operation(summary = "Mettre à jour un produit", description = "Modifie les informations d'un produit existant", tags = {"OPTIONNEL", "RECOMMENDATIONS"})
+    @Operation(summary = "Mettre à jour un produit", description = "Modifie les informations d'un produit existant", tags = {"OPTIONNEL"})
     @ApiResponses(value = {
         @ApiResponse(responseCode = "200", description = "Produit mis à jour avec succès"),
         @ApiResponse(responseCode = "404", description = "Produit non trouvé"),
@@ -75,7 +75,7 @@ public class ProductController {
     }
     
     @DeleteMapping("/{id}")
-    @Operation(summary = "Supprimer un produit", description = "Supprime un produit de la base de données", tags = {"CRITIQUE", "AUTH"})
+    @Operation(summary = "Supprimer un produit", description = "Supprime un produit de la base de données", tags = {"CRITIQUE"})
     @ApiResponses(value = {
         @ApiResponse(responseCode = "204", description = "Produit supprimé avec succès"),
         @ApiResponse(responseCode = "404", description = "Produit non trouvé")
@@ -91,7 +91,7 @@ public class ProductController {
     }
     
     @GetMapping("/search")
-    @Operation(summary = "Rechercher des produits", description = "Recherche des produits par nom")
+    @Operation(summary = "Rechercher des produits", description = "Recherche des produits par nom", tags = {"OPTIONNEL"})
     @ApiResponse(responseCode = "200", description = "Résultats de recherche récupérés")
     public ResponseEntity<List<Product>> searchProducts(
             @Parameter(description = "Terme de recherche") @RequestParam String name) {
@@ -100,7 +100,7 @@ public class ProductController {
     }
     
     @GetMapping("/available")
-    @Operation(summary = "Obtenir les produits disponibles", description = "Récupère uniquement les produits en stock")
+    @Operation(summary = "Obtenir les produits disponibles", description = "Récupère uniquement les produits en stock", tags = {"CRITIQUE"})
     @ApiResponse(responseCode = "200", description = "Liste des produits disponibles")
     public ResponseEntity<List<Product>> getAvailableProducts() {
         List<Product> products = productService.getAvailableProducts();
